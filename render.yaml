@@ -1,0 +1,12 @@
+﻿services:
+  - type: web
+    name: pdfpilot-api
+    env: python
+    region: oregon
+    plan: free
+    rootDir: pdfpilot/backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: FRONTEND_ORIGINS
+        value: https://YOUR_VERCEL_DOMAIN
