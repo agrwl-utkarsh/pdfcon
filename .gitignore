@@ -10,6 +10,11 @@ __pycache__/
 # Local deps used for sandbox
 pdfpilot/backend/.deps/
 
+# Logs
+pdfpilot/backend/uvicorn*.log
+pdfpilot/backend/uvicorn*.out
+pdfpilot/backend/uvicorn*.err
+
 # Env files
 .env
 .env.local
