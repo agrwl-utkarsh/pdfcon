@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import os
 import shutil
@@ -9,7 +9,7 @@ from uuid import uuid4
 from fastapi import BackgroundTasks, FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
-from pypdf import PdfMerger, PdfReader, PdfWriter
+from pypdf import PdfReader, PdfWriter
 
 app = FastAPI()
 
@@ -79,7 +79,7 @@ async def merge_pdfs(
         saved_paths = _save_uploads(temp_dir, files)
         output_path = os.path.join(temp_dir, f"merged_{uuid4().hex}.pdf")
 
-        merger = PdfMerger()
+        merger = PdfWriter()
         try:
             for path in saved_paths:
                 merger.append(path)
