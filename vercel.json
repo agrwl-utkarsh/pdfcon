@@ -1,4 +1,5 @@
 ﻿{
+  "version": 2,
   "installCommand": "cd pdfpilot/frontend && npm install",
   "buildCommand": "cd pdfpilot/frontend && npm run build",
   "devCommand": "cd pdfpilot/frontend && npm run dev",
